@@ -80,10 +80,10 @@ char uart_getchar(void)
 /* This function waits for receiving a character from UART, and return the
 character */
     /* Local declaration */
-    char c;
+    unsigned char c;
     /* Progam statement */
     while(!uart_rd_byte(&c));
-    return c;
+    return (char)c;
 }
 
 void uart_putchar(const char c)
